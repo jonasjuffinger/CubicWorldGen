@@ -295,7 +295,7 @@ public final class DefaultDecorator implements ICubicPopulator {
             }
         }
 
-        if (dec.generateFalls) {
+        /*if (dec.generateFalls) {
             if (CWGEventFactory.decorate(world, random, pos, DecorateBiomeEvent.Decorate.EventType.LAKE_WATER)) {
                 for (int i = 0; i < 50; ++i) {
                     int yOffset = random.nextInt(ICube.SIZE) + ICube.SIZE / 2;
@@ -323,7 +323,7 @@ public final class DefaultDecorator implements ICubicPopulator {
                     (new WorldGenLiquids(Blocks.FLOWING_LAVA)).generate(world, random, blockPos);
                 }
             }
-        }
+        }*/
         MinecraftForge.EVENT_BUS.post(new DecorateCubeBiomeEvent.Post(world, random, pos));
 
     }
